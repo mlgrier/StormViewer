@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var pictures = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +24,11 @@ class ViewController: UIViewController {
             
             if item.hasPrefix("nssl") {
                 
-                    // this is a picture to load!
+                    pictures.append(item)
                 
             }
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
