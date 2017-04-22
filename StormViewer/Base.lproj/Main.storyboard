@@ -47,6 +47,38 @@
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="140.77961019490255"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="b2w-05-3eb">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="5sT-Sf-cbO" customClass="DetailViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LFK-Pq-mx2"/>
+                        <viewControllerLayoutGuide type="bottom" id="d35-mX-7MZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m46-ob-EmI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TK2-AT-lf4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TK2-AT-lf4" secondAttribute="trailing" id="VHt-lw-sC8"/>
+                            <constraint firstItem="TK2-AT-lf4" firstAttribute="top" secondItem="m46-ob-EmI" secondAttribute="top" id="ll7-YL-DMB"/>
+                            <constraint firstItem="TK2-AT-lf4" firstAttribute="leading" secondItem="m46-ob-EmI" secondAttribute="leading" id="mh4-vd-MyU"/>
+                            <constraint firstItem="TK2-AT-lf4" firstAttribute="bottom" secondItem="d35-mX-7MZ" secondAttribute="top" id="pkZ-o9-vHf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TK2-AT-lf4" id="GFT-nE-veK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xG2-HX-dhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493.5999999999999" y="142.57871064467767"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hk5-aE-7rM">
             <objects>
