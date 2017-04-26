@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class DetailViewController: UIViewController {
 
@@ -45,11 +46,17 @@ class DetailViewController: UIViewController {
     
     func shareTapped() {
         
-        let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
+//        let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
+//        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+//        present(vc, animated: true)
         
-        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        
-        present(vc, animated: true)
+        if let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook) {
+            vc.setInitialText("Look at this great picture!")
+            vc.add(imageView.image!)
+            vc.add(URL(string: "http://www.photolib.noaa.gov/nssl"))
+            
+            present(vc, animated: true)
+        }
         
     }
 
